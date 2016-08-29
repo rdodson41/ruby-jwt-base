@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'irb'
 require 'jwt/base'
+require 'pry'
 
-IRB.start
+Pry.start
