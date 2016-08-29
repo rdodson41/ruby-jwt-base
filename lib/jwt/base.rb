@@ -1,7 +1,6 @@
-require "jwt/base/version"
+require 'jwt/base/version'
 
-module Jwt
-  module Base
-    # Your code goes here...
+module JWT
+  class Base
   end
 end
