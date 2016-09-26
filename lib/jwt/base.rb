@@ -1,6 +1,6 @@
-require 'active_support/core_ext/hash/compact'
-require 'active_support/core_ext/hash/keys'
-require 'active_support/core_ext/time/calculations'
+require 'active_support/core_ext/hash'
+require 'active_support/core_ext/time'
+require 'jwt'
 require 'jwt/base/version'
 
 module JWT
