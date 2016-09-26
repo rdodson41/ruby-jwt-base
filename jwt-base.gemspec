@@ -13,9 +13,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/rdodson41/ruby-jwt-base'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split(/\x0/).reject { |file| file =~ /^(test|spec|features)\// }
+  spec.files         = `git ls-files -z`.split(/\x0/).reject { |file| file =~ %r{^(test|spec|features)/} }
   spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(/^exe\//) { |file| File.basename(file) }
+  spec.executables   = spec.files.grep(%r{^exe/}) { |file| File.basename(file) }
   spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'activesupport', '~> 4.1'
@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'pry', '~> 0.10'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'rubocop', '~> 0.43'
 end
