@@ -1,5 +1,13 @@
 sudo: false
 language: ruby
 rvm:
-  - 2.3.0
+- 2.3.0
 before_install: gem install bundler -v 1.12.5
+deploy:
+  provider: rubygems
+  api_key:
+    secure: NFuJFHrCjTwk7QQu+LOUmN1y/eZCaSIK9jz+HCLNc3drGC+hcFlD7noU37o0kQ3FxVrfNm6eQwBBcwsX1PFrdqahb4RAl4mRG+0FZqsLmJ+nT+ix7PVEPoumuV8vwQo827AXcTLeBYqfbyTNq+gV1Ecu8qUN3vbOd4mMSOgBxH9meEfeGzGQXNiD7+UG66DwM1zpy+qsBzURe+7Zzo8cDIKirIGxCZoqM+o5V9UzeVsFLgM/qt5nDesgqaLA429c8wJ5Eq3f8TitoWFZHCUGcyYBnUbC150Preyxq9ehnIJLXNdI3DJTWuQuirbB4RJF/z99rtboTNfC9/SK1jL4CQDz5XOJ+bqlbjDukrXNbW8/llsUqZnPWQM/y1taEA7aQDfSsvFDmv3ZzYsFfbaqhgeGv7qpu0VpIQMmZGnxeWFsCvSaA937fI0n/jr2Vi+znMKqc57O+4vtiMYFEARPhrcK1/Wod4B12OlmadvgVngeKoMfqq5TZfBHN08Q+9pQr6UwEx+SbSE3bE3JYXWYdhxPomW2l9yXRkwJ5TRJy0ohCdI3XgBTFoSlzuSqw3GiM5fFlHtcpFb3EGAm0+5mU8tYlnkhBJlItYuCW/jQWt/iQWlYey3yUYjlFKGlvny2PyC540Q0D3eCjHJMkYxEG1Trd4gT6G0DqaHCfFWuvL8=
+  gem: jwt-base
+  on:
+    tags: true
+    repo: rdodson41/ruby-jwt-base
