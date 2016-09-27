@@ -11,3 +11,7 @@ deploy:
   on:
     tags: true
     repo: rdodson41/ruby-jwt-base
+addons:
+  code_climate:
+    repo_token:
+      secure: SaBWUEpBiQ8KQHgWXLadCv6GMW8Yd3VG0+8W+LUDdAxRKxpaAr+qVc3TmIeyXvKCjgErFYQUeu4xYaF2zJh8fv5cWw6Akk7lvPoG9I5+IhvS5CNnMiqmbtvYaT6TsYNcerHNBBv8kN3hZ2zL0S9UyNX2Vsipg13ECy3TD+PH7idoTwIh9fuxsk/HXuQ3cNJmiAOw15DiEPXeCV1yhHptwXHtXN66KcPUyL5qUZz3Ga+2HokrrK+hYtVRF71xzfNOHOTUXFlp+RBSgIURR5h2N9R7D+ytS1HcH1t6dQZf7+omhqC374jv4r+iy+56VDRT+Xw1Sl4MaTCLrnv4E5gOq2M33GeRZ4HeNMqmz5v/6eTVt+3ziP8wBnmYOTj4OlcwUTWytXDDHmS2MSnkjmwISrbYEzMi/fP5/vEOJ80lLmgUtX/ix9qts3GJNSZOf0H+WvYddVpeR/Zr/3mMIxD4GEmrW1jxI849B5Nqg71QK4Y7ldY0QDqLYlpkg9Je8iCgNrvM4kFhbCVL8XYu1JwfN0Zp3ZaXg2FKOQ3iNYbYokOGmkL0VCLPg5Z8ZvD1Uwlygmzj/ZwYHEmGZTjOfDOrKO4E+O8H6dr430xfJrCveafC4RofK+7Wmp1RI4I5+74Xrxur/JnkBIoaKuJqA/PLUov0pgtw9SkpGbi7I5Uf8uY=
