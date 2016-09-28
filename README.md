@@ -1,6 +1,7 @@
 # JWT::Base
 
 [![Gem Version](https://badge.fury.io/rb/jwt-base.svg)](https://badge.fury.io/rb/jwt-base)
+[![Dependency Status](https://gemnasium.com/badges/github.com/rdodson41/ruby-jwt-base.svg)](https://gemnasium.com/github.com/rdodson41/ruby-jwt-base)
 [![Build Status](https://travis-ci.org/rdodson41/ruby-jwt-base.svg?branch=master)](https://travis-ci.org/rdodson41/ruby-jwt-base)
 [![Code Climate](https://codeclimate.com/github/rdodson41/ruby-jwt-base/badges/gpa.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-base)
 [![Test Coverage](https://codeclimate.com/github/rdodson41/ruby-jwt-base/badges/coverage.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-base/coverage)
