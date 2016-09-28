@@ -2,6 +2,9 @@
 
 [![Gem Version](https://badge.fury.io/rb/jwt-base.svg)](https://badge.fury.io/rb/jwt-base)
 [![Build Status](https://travis-ci.org/rdodson41/ruby-jwt-base.svg?branch=master)](https://travis-ci.org/rdodson41/ruby-jwt-base)
+[![Code Climate](https://codeclimate.com/github/rdodson41/ruby-jwt-base/badges/gpa.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-base)
+[![Test Coverage](https://codeclimate.com/github/rdodson41/ruby-jwt-base/badges/coverage.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-base/coverage)
+[![Issue Count](https://codeclimate.com/github/rdodson41/ruby-jwt-base/badges/issue_count.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-base)
 
 A thin wrapper of [ruby-jwt](https://jwt.github.io/ruby-jwt), an implementation of the [RFC 7519 OAuth JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519) standard.
 
