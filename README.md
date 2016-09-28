@@ -1,5 +1,6 @@
 # JWT::Base
 
+[![Gem Version](https://badge.fury.io/rb/jwt-base.svg)](https://badge.fury.io/rb/jwt-base)
 [![Build Status](https://travis-ci.org/rdodson41/ruby-jwt-base.svg?branch=master)](https://travis-ci.org/rdodson41/ruby-jwt-base)
 
 A thin wrapper of [ruby-jwt](https://jwt.github.io/ruby-jwt), an implementation of the [RFC 7519 OAuth JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519) standard.
