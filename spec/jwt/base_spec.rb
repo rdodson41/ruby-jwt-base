@@ -17,7 +17,7 @@ describe JWT::Base do
 
   describe '::VERSION' do
     it do
-      expect(JWT::Base::VERSION).to eq '0.1.0'
+      expect(JWT::Base::VERSION).to eq '0.2.0'
     end
   end
 
