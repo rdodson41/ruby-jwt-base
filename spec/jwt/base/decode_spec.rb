@@ -8,6 +8,6 @@ RSpec.shared_examples 'JWT::Base.decode' do |*arguments|
   end
 
   it do
-    is_expected.to eq payload
+    is_expected.to eq payload.deep_stringify_keys
   end
 end
