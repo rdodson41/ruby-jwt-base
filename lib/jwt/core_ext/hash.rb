@@ -30,4 +30,6 @@ module JWT
   end
 end
 
-Hash.include(JWT::CoreExt::Hash)
+class Hash
+  include JWT::CoreExt::Hash
+end

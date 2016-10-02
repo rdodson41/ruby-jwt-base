@@ -24,4 +24,6 @@ module JWT
   end
 end
 
-Array.include(JWT::CoreExt::Array)
+class Array
+  include JWT::CoreExt::Array
+end
