@@ -1,3 +1,4 @@
+require 'delegate'
 require 'jwt'
 require 'jwt/base/version'
 require 'jwt/core_ext'
