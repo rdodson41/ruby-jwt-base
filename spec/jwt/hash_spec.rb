@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe JWT::OpenStruct do
+describe JWT::Hash do
   let :reserved_claims do
     { iat: Time.now.to_i }
   end
@@ -17,11 +17,11 @@ describe JWT::OpenStruct do
 
   describe '.decode' do
     context 'with no claims' do
-      it_behaves_like 'JWT::OpenStruct.decode'
+      it_behaves_like 'JWT::Hash.decode'
     end
 
     context 'with claims' do
-      it_behaves_like 'JWT::OpenStruct.decode', email: Faker::Internet.email
+      it_behaves_like 'JWT::Hash.decode', email: Faker::Internet.email
     end
   end
 end
