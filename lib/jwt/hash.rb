@@ -1,10 +1,9 @@
 require 'jwt/base'
-require 'ostruct'
 
 module JWT
-  class OpenStruct < Base
+  class Hash < Base
     def self.decode(token)
-      ::OpenStruct.new(super)
+      super.deep_symbolize_keys
     end
   end
 end

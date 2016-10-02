@@ -1,7 +1,8 @@
-require 'active_support/core_ext/hash'
-require 'active_support/core_ext/time'
+require 'delegate'
 require 'jwt'
 require 'jwt/base/version'
+require 'jwt/core_ext'
+require 'jwt/hash'
 require 'jwt/open_struct'
 
 module JWT
@@ -12,7 +13,7 @@ module JWT
     end
 
     def self.decode(token)
-      JWT.decode(token, key, !alg.nil?, algorithm: alg).first.deep_symbolize_keys
+      JWT.decode(token, key, !alg.nil?, algorithm: alg).first
     end
 
     def self.reserved_claims
@@ -40,7 +41,7 @@ module JWT
     end
 
     def self.iat
-      Time.current.to_i
+      Time.now.to_i
     end
 
     def self.jti
