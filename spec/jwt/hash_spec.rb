@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe JWT::Hash do
   let :reserved_claims do
-    { iat: Time.now.to_i }
+    { iat: Time.current.to_i }
   end
 
   let :token do
