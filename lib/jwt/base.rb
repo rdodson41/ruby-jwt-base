@@ -3,6 +3,7 @@ require 'active_support/core_ext/time'
 require 'jwt'
 require 'jwt/base/version'
 require 'jwt/hash'
+require 'jwt/hash_with_indifferent_access'
 require 'jwt/open_struct'
 
 module JWT
