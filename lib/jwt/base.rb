@@ -1,8 +1,9 @@
-require 'delegate'
+require 'active_support/core_ext/hash'
+require 'active_support/core_ext/time'
 require 'jwt'
 require 'jwt/base/version'
-require 'jwt/core_ext'
 require 'jwt/hash'
+require 'jwt/hash_with_indifferent_access'
 require 'jwt/open_struct'
 
 module JWT
@@ -41,7 +42,7 @@ module JWT
     end
 
     def self.iat
-      Time.now.to_i
+      Time.current.to_i
     end
 
     def self.jti

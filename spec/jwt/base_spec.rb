@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe JWT::Base do
   let :reserved_claims do
-    { iat: Time.now.to_i }
+    { iat: Time.current.to_i }
   end
 
   let :token do
@@ -17,7 +17,7 @@ describe JWT::Base do
 
   describe '::VERSION' do
     it do
-      expect(JWT::Base::VERSION).to eq '0.2.0'
+      expect(JWT::Base::VERSION).to eq '0.3.0'
     end
   end
 
