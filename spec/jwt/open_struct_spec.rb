@@ -1,4 +1,4 @@
-describe JWT::OpenStruct do
+RSpec.describe JWT::OpenStruct do
   let :reserved_claims do
     { iat: Time.current.to_i }
   end

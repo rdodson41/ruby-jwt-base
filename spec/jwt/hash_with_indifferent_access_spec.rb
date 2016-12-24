@@ -1,4 +1,4 @@
-describe JWT::HashWithIndifferentAccess do
+RSpec.describe JWT::HashWithIndifferentAccess do
   let :reserved_claims do
     { iat: Time.current.to_i }
   end
