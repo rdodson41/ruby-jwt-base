@@ -1,18 +1,16 @@
 language: ruby
 rvm:
-- 2.3.0
-- 2.2.5
-- 2.1.2
-before_install: gem install bundler
-deploy:
-  provider: rubygems
-  api_key:
-    secure: rK3h+dIe7FCpxspPnx3geieyhBzuDsAYDf4g/XXcjiaQIbEKNfz7vEPuHTx8fD9iPdZNzuX86pJkuXi4fHPfr0WF0HTd8wOdu8nyfTj6lMBM5NfB4EfosSZzAI/1icE27jAHWty8fySiir3eIK5AkCj/A/B4WaCu4TEbZ1XJlqAXYcWrDMHJj5K5m0MJGUAWqSK+aIne6UMGVkAHFFE0fxVL6aeFXs1a75Ga+XObJ2Ry0BfB57ABx7W9HSO1dpDFFbpoIPZQspypQ7GEwIyYT9dEc5T4Fmo6UGgUZkD2blpBKRJgGnPJMfB6Cb8YykNAUb+OBOZZluqYnQWNRTG1VRN5ATKr0W+ZkVQgMBL9zVoOGGaERhJxggbOmWpX/lkTO7PVcZuiht1EDPVFwkttXin3d/thiRD+TvnY/xgorx2S5bR7qSij8NYYtbTh440pndLlp4tJ8BlxOsj5JWe1GnSuBxEcRaaOQOP1D9+/+d5PP5/dd+8Fn84dhTcy7/PR8mnbjDGxQ1NrcuLTpwFHkYvIRjg3cuQEj+zV08fT0Ole9FjOPkDvzWOOBPJTxtdahn40c/zy2C68DiecYp9R+zkCdvna4SvbzJg/sDkJNzxbYwLtksIZN0zTrDSf8g09zGiPaZVokw58zaqda6V+PKyzuyamwX38iRiaV8ebBKw=
-  gem: jwt-base
-  on:
-    tags: true
-    repo: rdodson41/ruby-jwt-base
+  - 2.3.3
+  - 2.3.0
+  - 2.2.6
+  - 2.1.10
+  - 2.1.9
+  - 2.0.0
 addons:
   code_climate:
     repo_token:
       secure: T5j8mRouYwjc9DdAYm0Xn0rf0bSbgW+q5XgfXZhWsEk91z9jZhaot6CG4qsJxaxrdOxtptOwvF41wYt7mdW1vPaujrymuatB3bFGuR0rrUEz55wf+q8jaOaoWIKNFxV4n5eb64gIeF60ScmlVRPON4CJgGyLd11X3aF6o39mIDoJFC2ca19sw1HLH4iFXZLMnQ2WbGobeq5wTYzlSgHEIhPQiUt3z2+yEMV+qmHv896+qnfBMfrZuGn95/oByX+iF2nM7wsOHDOoeBDiidbY/mZdhkbGCw2SDwZ0SFlwzIOw+rlKUBlRy5GqqhDG0HG3uDho0oWnpM8gNK48lbY7DPVR21kb4KFaAf5gFMjsO5VIsldUQm+m0IBeSvecWhV/38ATUkmZTBx1KPm7tZeKrpq6f7u1Ujk6LqwFpPkrnRnq/+eFQCuxTCZa9CfcjUeHeKg1WlvMyKysj0LI0vgRwV/64/exEIvkXWby041nucNyvGzU+IZ2ApLrJtgxXiPXnnrlHEIE66UobzlFZhgo46KhGf2MayZuhtouLJtf1b3xYe4E/jLgh/PJk0J9ZyHK1L4x4cT7Tz2R3IsRXQPyT+ufqEqQ1PL3O1DBjy1Ob3aT+kXWwpS4flbvIdI8ziUwAW6GVK+ZD57qrcN0pcvmPmHCLISIQe/dA93/SpfS1JE=
+before_install:
+  - gem install bundler
+after_success:
+  - bundle exec codeclimate-test-reporter
