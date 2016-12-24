@@ -1,5 +1,7 @@
 ---
 engines:
+  csslint:
+    enabled: true
   duplication:
     enabled: true
     config:
@@ -8,12 +10,15 @@ engines:
       - javascript
       - python
       - php
+  eslint:
+    enabled: true
   fixme:
     enabled: true
   rubocop:
     enabled: true
 ratings:
   paths:
+  - "**.css"
   - "**.inc"
   - "**.js"
   - "**.jsx"

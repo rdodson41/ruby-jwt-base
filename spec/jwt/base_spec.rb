@@ -1,6 +1,4 @@
-require 'spec_helper'
-
-describe JWT::Base do
+RSpec.describe JWT::Base do
   let :reserved_claims do
     { iat: Time.current.to_i }
   end
