@@ -18,8 +18,6 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |file| File.basename(file) }
   spec.require_paths = ['lib']
 
-  spec.required_ruby_version = '~> 2.1'
-
   spec.add_runtime_dependency 'activesupport', '~> 4.2'
   spec.add_runtime_dependency 'jwt', '~> 1.5'
 
