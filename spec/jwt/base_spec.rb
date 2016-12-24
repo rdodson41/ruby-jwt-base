@@ -15,7 +15,7 @@ RSpec.describe JWT::Base do
 
   describe '::VERSION' do
     it do
-      expect(JWT::Base::VERSION).to eq '0.3.1'
+      expect(JWT::Base::VERSION).to eq '0.3.2'
     end
   end
 
