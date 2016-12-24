@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe JWT::Hash do
   let :reserved_claims do
     { iat: Time.current.to_i }
