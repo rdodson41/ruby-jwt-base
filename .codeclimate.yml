@@ -1,5 +1,9 @@
 ---
 engines:
+  bundler-audit:
+    enabled: true
+  csslint:
+    enabled: true
   duplication:
     enabled: true
     config:
@@ -8,12 +12,16 @@ engines:
       - javascript
       - python
       - php
+  eslint:
+    enabled: true
   fixme:
     enabled: true
   rubocop:
     enabled: true
 ratings:
   paths:
+  - Gemfile.lock
+  - "**.css"
   - "**.inc"
   - "**.js"
   - "**.jsx"
