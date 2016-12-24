@@ -32,5 +32,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rubocop', '~> 0.43'
   spec.add_development_dependency 'simplecov', '~> 0.12'
   spec.add_development_dependency 'timecop', '~> 0.8'
-  spec.add_development_dependency 'travis', '~> 1.8'
 end
