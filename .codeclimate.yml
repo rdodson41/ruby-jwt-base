@@ -1,7 +1,5 @@
 ---
 engines:
-  csslint:
-    enabled: true
   duplication:
     enabled: true
     config:
@@ -10,8 +8,6 @@ engines:
       - javascript
       - python
       - php
-  eslint:
-    enabled: true
   fixme:
     enabled: true
   rubocop:
