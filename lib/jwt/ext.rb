@@ -1,0 +1,8 @@
+require 'jwt'
+require 'jwt/core_ext/hash'
+require 'jwt/core_ext/string'
+require 'jwt/claims'
+require 'jwt/decodable'
+require 'jwt/encodable'
+require 'jwt/ext/version'
+require 'jwt/token'
