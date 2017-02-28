@@ -1,4 +1,4 @@
-# JWT::Base
+# JWT::Ext
 
 [![Gem Version](https://badge.fury.io/rb/jwt-ext.svg)](https://badge.fury.io/rb/jwt-ext)
 [![Dependency Status](https://gemnasium.com/badges/github.com/rdodson41/ruby-jwt-ext.svg)](https://gemnasium.com/github.com/rdodson41/ruby-jwt-ext)
