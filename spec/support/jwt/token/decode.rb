@@ -19,7 +19,7 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
         let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
 
         it do
-          is_expected.to eq JWT.decode(token.to_s, '9a9aec304dcf460cfb9bf2f8af6051a0', false, algorithm: nil).first
+          is_expected.to eq JWT.decode(token.to_s, nil, false, algorithm: nil).first
         end
       end
 
@@ -27,7 +27,7 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
         let :key { 'e0c5eec151c5d17c57feea1eadde1e77' }
 
         it do
-          is_expected.to eq JWT.decode(token.to_s, 'e0c5eec151c5d17c57feea1eadde1e77', false, algorithm: nil).first
+          is_expected.to eq JWT.decode(token.to_s, nil, false, algorithm: nil).first
         end
       end
     end
