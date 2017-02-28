@@ -1,5 +1,5 @@
-require 'jwt/claims/encode/fail'
-require 'jwt/claims/encode/pass'
+require 'support/jwt/claims/encode/fail'
+require 'support/jwt/claims/encode/pass'
 
 RSpec.shared_examples "#{JWT::Claims}#encode" do |type, claims:|
   let :key { nil }

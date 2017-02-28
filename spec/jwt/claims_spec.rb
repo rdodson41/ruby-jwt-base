@@ -1,4 +1,4 @@
-require 'jwt/claims/encode'
+require 'support/jwt/claims/encode'
 
 RSpec.describe JWT::Claims do
   describe '#encode' do
