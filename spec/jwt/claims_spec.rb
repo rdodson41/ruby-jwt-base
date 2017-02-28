@@ -8,7 +8,7 @@ RSpec.describe JWT::Claims do
         { email: Faker::Internet.email }
       end
 
-      include_examples "#{described_class}#encode/pass"
+      it_behaves_like "#{described_class}#encode/pass"
     end
 
     context 'when claims is an implicit hash' do
@@ -20,7 +20,7 @@ RSpec.describe JWT::Claims do
         { email: Faker::Internet.email }
       end
 
-      include_examples "#{described_class}#encode/pass"
+      it_behaves_like "#{described_class}#encode/pass"
     end
 
     context 'when claims is neither an explicit nor implicit hash' do
@@ -28,7 +28,7 @@ RSpec.describe JWT::Claims do
         SecureRandom.hex
       end
 
-      include_examples "#{described_class}#encode/fail"
+      it_behaves_like "#{described_class}#encode/fail"
     end
   end
 end
