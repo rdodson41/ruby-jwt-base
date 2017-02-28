@@ -1,5 +1,17 @@
+AllCops:
+  TargetRubyVersion: 2.4
+
+Metrics/BlockLength:
+  Exclude:
+    - jwt-ext.gemspec
+    - spec/**/*.rb
+
+Metrics/LineLength:
+  Exclude:
+    - spec/**/*.rb
+
 Style/Documentation:
   Enabled: false
 
-Metrics/LineLength:
+Style/FrozenStringLiteralComment:
   Enabled: false
