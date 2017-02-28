@@ -15,10 +15,20 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
     end
 
     context 'when key is not nil' do
-      let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
+      context 'when key is correct' do
+        let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
 
-      it do
-        is_expected.to eq JWT.decode(token.to_s, '9a9aec304dcf460cfb9bf2f8af6051a0', false, algorithm: nil).first
+        it do
+          is_expected.to eq JWT.decode(token.to_s, '9a9aec304dcf460cfb9bf2f8af6051a0', false, algorithm: nil).first
+        end
+      end
+
+      context 'when key is not correct' do
+        let :key { 'e0c5eec151c5d17c57feea1eadde1e77' }
+
+        it do
+          is_expected.to eq JWT.decode(token.to_s, 'e0c5eec151c5d17c57feea1eadde1e77', false, algorithm: nil).first
+        end
       end
     end
   end
@@ -36,10 +46,20 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
       end
 
       context 'when key is not nil' do
-        let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
+        context 'when key is correct' do
+          let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
 
-        it do
-          is_expected.to eq JWT.decode(token.to_s, '9a9aec304dcf460cfb9bf2f8af6051a0', true, algorithm: 'HS256').first
+          it do
+            is_expected.to eq JWT.decode(token.to_s, '9a9aec304dcf460cfb9bf2f8af6051a0', true, algorithm: 'HS256').first
+          end
+        end
+
+        context 'when key is not correct' do
+          let :key { 'e0c5eec151c5d17c57feea1eadde1e77' }
+
+          it do
+            expect { subject }.to raise_error JWT::VerificationError
+          end
         end
       end
     end
@@ -56,10 +76,20 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
       end
 
       context 'when key is not nil' do
-        let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
+        context 'when key is correct' do
+          let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
 
-        it do
-          expect { subject }.to raise_error JWT::IncorrectAlgorithm
+          it do
+            expect { subject }.to raise_error JWT::IncorrectAlgorithm
+          end
+        end
+
+        context 'when key is not correct' do
+          let :key { 'e0c5eec151c5d17c57feea1eadde1e77' }
+
+          it do
+            expect { subject }.to raise_error JWT::IncorrectAlgorithm
+          end
         end
       end
     end
