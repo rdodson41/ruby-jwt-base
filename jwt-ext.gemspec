@@ -13,9 +13,13 @@ Gem::Specification.new do |spec|
   spec.homepage      = 'https://github.com/rdodson41/ruby-jwt-ext'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split(/\x0/).reject { |file| file =~ %r{^(test|spec|features)/} }
+  spec.files         = `git ls-files -z`.split(/\x0/).reject do |file|
+    file =~ %r{^(test|spec|features)/}
+  end
   spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |file| File.basename(file) }
+  spec.executables   = spec.files.grep(%r{^exe/}) do |file|
+    File.basename(file)
+  end
   spec.require_paths = ['lib']
 
   spec.required_ruby_version = '~> 2.0'
