@@ -1,5 +1,12 @@
-RSpec.shared_examples "#{JWT::Claims}#encode/pass" do |claims:|
+RSpec.shared_examples "#{JWT::Claims}#encode/pass" do
+  subject do
+    described_class.new(claims).encode(key: key, alg: alg)
+  end
+
   context 'when alg is nil' do
+    let :alg { nil }
+    let :key { nil }
+
     it do
       is_expected.to eq JWT.encode(claims.to_h, nil, nil)
     end
@@ -9,6 +16,8 @@ RSpec.shared_examples "#{JWT::Claims}#encode/pass" do |claims:|
     let :alg { 'HS256' }
 
     context 'when key is nil' do
+      let :key { nil }
+
       it do
         expect { subject }.to raise_error(TypeError)
       end

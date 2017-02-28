@@ -1,5 +1,12 @@
 RSpec.shared_examples "#{JWT::Claims}#encode/fail" do
+  subject do
+    described_class.new(claims).encode(key: key, alg: alg)
+  end
+
   context 'when alg is nil' do
+    let :alg { nil }
+    let :key { nil }
+
     it do
       expect { subject }.to raise_error(NameError)
     end
@@ -9,6 +16,8 @@ RSpec.shared_examples "#{JWT::Claims}#encode/fail" do
     let :alg { 'HS256' }
 
     context 'when key is nil' do
+      let :key { nil }
+
       it do
         expect { subject }.to raise_error(NameError)
       end
