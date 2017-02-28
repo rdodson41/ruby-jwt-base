@@ -16,7 +16,11 @@ RSpec.describe JWT::Token do
 
     context 'when token is an implicit string' do
       let :token do
-        double(to_s: JWT.encode(claims, '9a9aec304dcf460cfb9bf2f8af6051a0', 'HS256'))
+        double(to_s: to_s)
+      end
+
+      let :to_s do
+        JWT.encode(claims, '9a9aec304dcf460cfb9bf2f8af6051a0', 'HS256')
       end
 
       it_behaves_like "#{described_class}#decode"
