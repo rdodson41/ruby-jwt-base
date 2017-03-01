@@ -4,10 +4,14 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
   end
 
   context 'when alg is nil' do
-    let :alg { nil }
+    let :alg do
+      nil
+    end
 
     context 'when key is nil' do
-      let :key { nil }
+      let :key do
+        nil
+      end
 
       it do
         is_expected.to eq JWT.decode(to_s, nil, false, algorithm: nil).first
@@ -16,7 +20,9 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
 
     context 'when key is not nil' do
       context 'when key is correct' do
-        let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
+        let :key do
+          '9a9aec304dcf460cfb9bf2f8af6051a0'
+        end
 
         it do
           is_expected.to eq JWT.decode(to_s, nil, false, algorithm: nil).first
@@ -24,7 +30,9 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
       end
 
       context 'when key is not correct' do
-        let :key { 'e0c5eec151c5d17c57feea1eadde1e77' }
+        let :key do
+          'e0c5eec151c5d17c57feea1eadde1e77'
+        end
 
         it do
           is_expected.to eq JWT.decode(to_s, nil, false, algorithm: nil).first
@@ -35,10 +43,14 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
 
   context 'when alg is not nil' do
     context 'when alg is correct' do
-      let :alg { 'HS256' }
+      let :alg do
+        'HS256'
+      end
 
       context 'when key is nil' do
-        let :key { nil }
+        let :key do
+          nil
+        end
 
         it do
           expect { subject }.to raise_error TypeError
@@ -47,7 +59,9 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
 
       context 'when key is not nil' do
         context 'when key is correct' do
-          let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
+          let :key do
+            '9a9aec304dcf460cfb9bf2f8af6051a0'
+          end
 
           it do
             is_expected.to eq JWT.decode(to_s, '9a9aec304dcf460cfb9bf2f8af6051a0', true, algorithm: 'HS256').first
@@ -55,7 +69,9 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
         end
 
         context 'when key is not correct' do
-          let :key { 'e0c5eec151c5d17c57feea1eadde1e77' }
+          let :key do
+            'e0c5eec151c5d17c57feea1eadde1e77'
+          end
 
           it do
             expect { subject }.to raise_error JWT::VerificationError
@@ -65,10 +81,14 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
     end
 
     context 'when alg is not correct' do
-      let :alg { 'HS512' }
+      let :alg do
+        'HS512'
+      end
 
       context 'when key is nil' do
-        let :key { nil }
+        let :key do
+          nil
+        end
 
         it do
           expect { subject }.to raise_error JWT::IncorrectAlgorithm
@@ -77,7 +97,9 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
 
       context 'when key is not nil' do
         context 'when key is correct' do
-          let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
+          let :key do
+            '9a9aec304dcf460cfb9bf2f8af6051a0'
+          end
 
           it do
             expect { subject }.to raise_error JWT::IncorrectAlgorithm
@@ -85,7 +107,9 @@ RSpec.shared_examples "#{JWT::Token}#decode" do
         end
 
         context 'when key is not correct' do
-          let :key { 'e0c5eec151c5d17c57feea1eadde1e77' }
+          let :key do
+            'e0c5eec151c5d17c57feea1eadde1e77'
+          end
 
           it do
             expect { subject }.to raise_error JWT::IncorrectAlgorithm

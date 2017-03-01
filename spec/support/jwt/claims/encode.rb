@@ -4,10 +4,14 @@ RSpec.shared_examples "#{JWT::Claims}#encode" do
   end
 
   context 'when alg is nil' do
-    let :alg { nil }
+    let :alg do
+      nil
+    end
 
     context 'when key is nil' do
-      let :key { nil }
+      let :key do
+        nil
+      end
 
       it do
         is_expected.to eq JWT.encode(to_h, nil, nil)
@@ -15,7 +19,9 @@ RSpec.shared_examples "#{JWT::Claims}#encode" do
     end
 
     context 'when key is not nil' do
-      let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
+      let :key do
+        '9a9aec304dcf460cfb9bf2f8af6051a0'
+      end
 
       it do
         is_expected.to eq JWT.encode(to_h, nil, nil)
@@ -24,10 +30,14 @@ RSpec.shared_examples "#{JWT::Claims}#encode" do
   end
 
   context 'when alg is not nil' do
-    let :alg { 'HS256' }
+    let :alg do
+      'HS256'
+    end
 
     context 'when key is nil' do
-      let :key { nil }
+      let :key do
+        nil
+      end
 
       it do
         expect { subject }.to raise_error TypeError
@@ -35,7 +45,9 @@ RSpec.shared_examples "#{JWT::Claims}#encode" do
     end
 
     context 'when key is not nil' do
-      let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
+      let :key do
+        '9a9aec304dcf460cfb9bf2f8af6051a0'
+      end
 
       it do
         is_expected.to eq JWT.encode(to_h, '9a9aec304dcf460cfb9bf2f8af6051a0', 'HS256')
