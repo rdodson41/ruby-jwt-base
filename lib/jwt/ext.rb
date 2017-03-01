@@ -1,4 +1,3 @@
-require 'jwt'
 require 'jwt/core_ext/hash'
 require 'jwt/core_ext/string'
 require 'jwt/claims'
