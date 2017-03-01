@@ -1,6 +1,5 @@
 Metrics/BlockLength:
   Exclude:
-    - jwt-ext.gemspec
     - spec/**/*.rb
 
 Style/Documentation:
