@@ -1,11 +1,11 @@
-# JWT::Base
+# JWT::Ext
 
-[![Gem Version](https://badge.fury.io/rb/jwt-base.svg)](https://badge.fury.io/rb/jwt-base)
-[![Dependency Status](https://gemnasium.com/badges/github.com/rdodson41/ruby-jwt-base.svg)](https://gemnasium.com/github.com/rdodson41/ruby-jwt-base)
-[![Build Status](https://travis-ci.org/rdodson41/ruby-jwt-base.svg?branch=master)](https://travis-ci.org/rdodson41/ruby-jwt-base)
-[![Code Climate](https://codeclimate.com/github/rdodson41/ruby-jwt-base/badges/gpa.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-base)
-[![Test Coverage](https://codeclimate.com/github/rdodson41/ruby-jwt-base/badges/coverage.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-base/coverage)
-[![Issue Count](https://codeclimate.com/github/rdodson41/ruby-jwt-base/badges/issue_count.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-base)
+[![Gem Version](https://badge.fury.io/rb/jwt-ext.svg)](https://badge.fury.io/rb/jwt-ext)
+[![Dependency Status](https://gemnasium.com/badges/github.com/rdodson41/ruby-jwt-ext.svg)](https://gemnasium.com/github.com/rdodson41/ruby-jwt-ext)
+[![Build Status](https://travis-ci.org/rdodson41/ruby-jwt-ext.svg?branch=master)](https://travis-ci.org/rdodson41/ruby-jwt-ext)
+[![Code Climate](https://codeclimate.com/github/rdodson41/ruby-jwt-ext/badges/gpa.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-ext)
+[![Test Coverage](https://codeclimate.com/github/rdodson41/ruby-jwt-ext/badges/coverage.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-ext/coverage)
+[![Issue Count](https://codeclimate.com/github/rdodson41/ruby-jwt-ext/badges/issue_count.svg)](https://codeclimate.com/github/rdodson41/ruby-jwt-ext)
 
 A thin wrapper of [ruby-jwt](https://jwt.github.io/ruby-jwt), an implementation of the [RFC 7519 OAuth JSON Web Token (JWT)](https://tools.ietf.org/html/rfc7519) standard.
 
@@ -14,7 +14,7 @@ A thin wrapper of [ruby-jwt](https://jwt.github.io/ruby-jwt), an implementation 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'jwt-base'
+gem 'jwt-ext'
 ```
 
 And then execute:
@@ -23,7 +23,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install jwt-base
+    $ gem install jwt-ext
 
 ## Development
 
@@ -33,7 +33,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/rdodson41/jwt-base. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/rdodson41/jwt-ext. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
