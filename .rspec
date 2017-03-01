@@ -1,6 +1,2 @@
 --color
 --require spec_helper
---require simplecov
---require faker
---require jwt/base
---require timecop

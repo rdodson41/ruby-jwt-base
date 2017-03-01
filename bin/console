@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'bundler/setup'
-require 'jwt/base'
+require 'jwt/ext'
 require 'pry'
 
 Pry.start
