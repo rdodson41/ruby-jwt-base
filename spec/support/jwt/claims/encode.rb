@@ -50,7 +50,7 @@ RSpec.shared_examples "#{JWT::Claims}#encode" do
       end
 
       it do
-        is_expected.to eq JWT.encode(to_h, '9a9aec304dcf460cfb9bf2f8af6051a0', 'HS256')
+        is_expected.to eq JWT.encode(to_h, key, alg)
       end
     end
   end
