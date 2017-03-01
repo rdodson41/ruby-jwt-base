@@ -29,8 +29,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.13'
   spec.add_development_dependency 'codeclimate-test-reporter', '~> 1.0'
   spec.add_development_dependency 'faker', '~> 1.6'
+  spec.add_development_dependency 'mutant-rspec', '~> 0.8'
+  spec.add_development_dependency 'pry-byebug', '~> 3.4'
   spec.add_development_dependency 'rake', '~> 12.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
-  spec.add_development_dependency 'pry-byebug', '~> 3.4'
+  spec.add_development_dependency 'rubocop', '~> 0.47'
   spec.add_development_dependency 'simplecov', '~> 0.12'
 end
