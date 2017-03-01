@@ -1,6 +1,6 @@
-RSpec.shared_examples "#{JWT::Claims}#encode/pass" do
+RSpec.shared_examples "#{JWT::Claims}#encode" do
   subject do
-    described_class.new(claims).encode(key: key, alg: alg)
+    claims.encode(key: key, alg: alg)
   end
 
   context 'when alg is nil' do
@@ -10,7 +10,7 @@ RSpec.shared_examples "#{JWT::Claims}#encode/pass" do
       let :key { nil }
 
       it do
-        is_expected.to eq JWT.encode(claims.to_h, nil, nil)
+        is_expected.to eq JWT.encode(to_h, nil, nil)
       end
     end
 
@@ -18,7 +18,7 @@ RSpec.shared_examples "#{JWT::Claims}#encode/pass" do
       let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
 
       it do
-        is_expected.to eq JWT.encode(claims.to_h, nil, nil)
+        is_expected.to eq JWT.encode(to_h, nil, nil)
       end
     end
   end
@@ -38,7 +38,7 @@ RSpec.shared_examples "#{JWT::Claims}#encode/pass" do
       let :key { '9a9aec304dcf460cfb9bf2f8af6051a0' }
 
       it do
-        is_expected.to eq JWT.encode(claims.to_h, '9a9aec304dcf460cfb9bf2f8af6051a0', 'HS256')
+        is_expected.to eq JWT.encode(to_h, '9a9aec304dcf460cfb9bf2f8af6051a0', 'HS256')
       end
     end
   end

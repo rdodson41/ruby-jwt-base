@@ -1,34 +1,27 @@
-require 'support/jwt/claims/encode/fail'
-require 'support/jwt/claims/encode/pass'
+require 'support/jwt/claims/encode'
 
 RSpec.describe JWT::Claims do
-  describe '#encode' do
-    context 'when claims is an explicit hash' do
-      let :claims do
-        { email: Faker::Internet.email }
-      end
+  let :to_h do
+    { email: Faker::Internet.email }
+  end
 
-      it_behaves_like "#{described_class}#encode/pass"
+  context 'when claims is an explicit hash' do
+    let :claims do
+      described_class.new(to_h)
     end
 
-    context 'when claims is an implicit hash' do
-      let :claims do
-        double(to_h: to_h)
-      end
+    describe '#encode' do
+      it_behaves_like "#{described_class}#{description}"
+    end
+  end
 
-      let :to_h do
-        { email: Faker::Internet.email }
-      end
-
-      it_behaves_like "#{described_class}#encode/pass"
+  context 'when claims is an implicit hash' do
+    let :claims do
+      described_class.new(double(to_h: to_h))
     end
 
-    context 'when claims is neither an explicit nor implicit hash' do
-      let :claims do
-        SecureRandom.hex
-      end
-
-      it_behaves_like "#{described_class}#encode/fail"
+    describe '#encode' do
+      it_behaves_like "#{described_class}#{description}"
     end
   end
 end
