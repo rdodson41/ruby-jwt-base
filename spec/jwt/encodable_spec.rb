@@ -12,8 +12,14 @@ RSpec.describe JWT::Encodable do
       is_expected.to be_a JWT::Claims
     end
 
-    it do
-      expect(subject.to_h).to eq encodable
+    describe '#to_h' do
+      subject do
+        encodable.jwt.to_h
+      end
+
+      it do
+        is_expected.to eq encodable
+      end
     end
   end
 end
